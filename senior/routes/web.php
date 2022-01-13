@@ -11,9 +11,12 @@
 |
 */
 
-use App\Http\Controllers\ServiceController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeniorListController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\FavController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,11 +24,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('users', 'UserController');
-Route::resource('/seniorList', 'SeniorListController');
-Route::resource('fav', 'FavController');
-Route::get('fav/{fav}/favAdd', 'FavController@favAdd')->name('fav.favAdd');
+Route::get('home', [HomeController::class, 'index'])->name('home');
+Route::resource('/users', UserController::class);
+Route::resource('/seniorList', SeniorListController::class);
+Route::resource('/fav', FavController::class);
+Route::get('/fav/{fav}/favAdd', [FavController::class, 'favAdd'])->name('fav.favAdd');
 
 Route::get('/services/signin', [App\Http\Controllers\ServiceController::class, 'index'])->name('signin.index');
 Route::post('/services/signin', [App\Http\Controllers\ServiceController::class, 'postSignIn'])->name('services.postSignin');
