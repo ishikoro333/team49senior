@@ -55,10 +55,10 @@
 
             @if(Auth::user()->manager_flg == 1)
                 <div>
-                    <a class="btn btn-sm btn-outline-dark mt-2 ml-4" href="{{ route('seniorList.show', $user->id) }}">{{ $user->name }}の{{config('const.button.users_info', 'users_info') }}</a>
+                    <a class="btn btn-sm btn-outline-dark mt-2 ml-6" href="{{ route('seniorList.show', $user->id) }}">{{ $user->name }}の{{config('const.button.users_info', 'users_info') }}</a>
                 </div>
                 <div>
-                    <a href="{{ route('seniorList.index', $user->id) }}" class="btn btn-sm btn-outline-dark mt-2 ml-4">{{ config('const.button.senior', 'senior') }}</a>
+                    <a href="{{ route('seniorList.index', $user->id) }}" class="btn btn-sm btn-outline-dark mt-2 ml-6">{{ config('const.button.senior', 'senior') }}</a>
                 </div>
             @endif
         </div>

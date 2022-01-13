@@ -70,10 +70,10 @@
                 <div class="border-bottom mt-2 mb-2"></div>
                 @if(Auth::user()->manager_flg == 1)
                     <div class="">
-                        <a href="{{ route('seniorList.index', $user->id) }}" class="btn btn-sm btn-outline-dark mt-2">{{ config('const.button.senior') }}</a>
+                        <a href="{{ route('seniorList.index', $user->id) }}" class="btn btn-sm btn-outline-dark mt-2 ml-4">{{ config('const.button.senior') }}</a>
                     </div>
                 @endif
-                        <a href="{{ route('seniorList.index') }}" class="form-group btn btn-sm btn-outline-dark mt-2">{{ config('const.button.back') }}</a>
+                        <a href="{{ route('seniorList.index') }}" class="form-group btn btn-sm btn-outline-dark mt-2 ml-4">{{ config('const.button.back') }}</a>
                     </div>
             </div>
         </div>
