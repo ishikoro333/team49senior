@@ -35,11 +35,11 @@
                         </form>
                     </li>
 
-            </div>
-            <div class="border-bottom">
-            </div>
-            @endif
-            @endforeach
+                    </div>
+                    <div class="border-bottom">
+                    </div>
+                    @endif
+                    @endforeach
         </div>
         <div class="col-md-2">
             <a href="{{ route('seniorList.create') }}" class="btn btn-outline-success mt-2 ml-4">{{ config('const.button.new', 'new') }}</a>
