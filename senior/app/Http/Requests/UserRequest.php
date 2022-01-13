@@ -26,7 +26,7 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required|max:20',
             'email' => 'required|max:255',
-            'password' => 'required|max:20|min:8',
+            'password' => 'required|max:20|min:8'
         ];
     }
 
@@ -39,7 +39,7 @@ class UserRequest extends FormRequest
             'email.max' => trans('メールアドレスは255文字以内で入力してください。'),
             'password.required' => trans('パスワードは必須です。'),
             'password.max' => trans('パスワードは20文字以内で入力してください。'),
-            'password.min' => trans('パスワードは8文字以上で入力してください。'),
+            'password.min' => trans('パスワードは8文字以上で入力してください。')
         ];
     }
 }

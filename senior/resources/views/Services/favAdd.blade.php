@@ -23,20 +23,20 @@
 
             <form action="{{ route('fav.store') }}" method="POST">
                 @csrf
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="site_name">{{ config('const.service.name', 'name') }}</label>
                         <input type="text" class="form-control" placeholder="サイト名を入力してください" name="site_name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="site_url">{{ config('const.service.url', 'url') }}</label>
                         <input type="text" class="form-control" placeholder="urlを入力してください" name="site_url">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="memo">{{ config('const.service.memo', 'service.memo') }}</label>
                         <input type="text" class="form-control" name="memo">
                     </div>
                     <input type="hidden" name="user_id" value="{{ $user->id }}">
-                    <div class="mb-2">
+                    <div class="mt-2 mb-2">
                         <button class="btn btn-lg btn-outline-primary" type="submit">{{ config('const.button.new', 'new') }}</button>
                     </div>
                 </form>

@@ -26,18 +26,9 @@ class ServiceRequest extends FormRequest
         return [
             'site_name' => 'required|max:20',
             'site_url' => 'required|max:255',
-            'memo' => 'max:20',
+            'memo' => 'max:20'
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'site_name.required' => trans('サイト名は必須です。'),
-            'site_name.max' => 'サイト名は20文字以内で入力してください。',
-            'site_url.required' => 'urlは必須です。',
-            'site_url.max' => 'urlは255文字以内で入力してください。',
-            'memo.max' => '20文字以内でメモしてください。',
-        ];
-    }
+    
 }

@@ -25,20 +25,20 @@
                 @csrf
                 @method('PATCH')
                     <input type="hidden" value="{{ $service->user_id }}" name="user_id">
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="site_name">{{ config('const.service.name', 'name') }}</label>
                         <input type="text" class="form-control" value="{{ $service->site_name }}" name="site_name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="site_url">{{ config('const.service.url', 'url') }}</label>
                         <input type="text" class="form-control" value="{{ $service->site_url }}" name="site_url">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="memo">{{ config('const.service.memo', 'service.memo') }}</label>
                         <input type="text" class="form-control" name="memo" value="{{ $service->memo }}">
                     </div>
                     <li class="list-group list-group-horizontal">
-                        <button type="submit" class="btn btn-outline-primary m-1">{{ config('const.button.update', 'update') }}</button>
+                        <button type="submit" class="btn btn-outline-primary mt-2 mb-2">{{ config('const.button.update', 'update') }}</button>
                     </li>
                 </form>
             </div>
