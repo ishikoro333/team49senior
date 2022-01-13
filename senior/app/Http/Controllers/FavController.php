@@ -37,7 +37,7 @@ class FavController extends Controller
     {
         $user = User::find($id);
 
-        return view('/services.fav', compact('user'));
+        return view('services.fav', compact('user'));
     }
 
     /**

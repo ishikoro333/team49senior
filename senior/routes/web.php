@@ -25,10 +25,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
-Route::resource('/users', UserController::class);
-Route::resource('/seniorList', SeniorListController::class);
-Route::resource('/fav', FavController::class);
-Route::get('/fav/{fav}/favAdd', [FavController::class, 'favAdd'])->name('fav.favAdd');
+Route::resource('users', UserController::class);
+Route::resource('seniorList', SeniorListController::class);
+Route::resource('fav', FavController::class)->except('index');
+Route::get('fav/{fav}/favAdd', [FavController::class, 'favAdd'])->name('fav.favAdd');
 
 Route::get('/services/signin', [App\Http\Controllers\ServiceController::class, 'index'])->name('signin.index');
 Route::post('/services/signin', [App\Http\Controllers\ServiceController::class, 'postSignIn'])->name('services.postSignin');
