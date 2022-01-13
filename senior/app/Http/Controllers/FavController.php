@@ -37,7 +37,7 @@ class FavController extends Controller
     {
         $user = User::find($id);
 
-        return view('services.fav', compact('user'));
+        return view('/services.fav', compact('user'));
     }
 
     /**
@@ -72,7 +72,7 @@ class FavController extends Controller
         $user = User::find($id);
         $services = Service::all()->where('user_id', '=', $user['id']);
 
-        return view('services.fav', compact('user', 'services'));
+        return view('/services.fav', compact('user', 'services'));
     }
 
     /**
@@ -92,7 +92,7 @@ class FavController extends Controller
             return redirect()->route('seniorList.index');
         }
 
-        return view('services.favEdit', compact('service'));
+        return view('/services.favEdit', compact('service'));
 
 
     }
@@ -151,7 +151,7 @@ class FavController extends Controller
     {
         $user = User::find($id);
 
-        return view('services.favAdd', compact('user'));
+        return view('/services.favAdd', compact('user'));
     }
 
 }
