@@ -12,6 +12,8 @@
 */
 
 use App\Http\Controllers\ServiceController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SeniorListController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,7 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::resource('services', 'ServiceController');
 Route::resource('users', 'UserController');
 Route::resource('seniorList', 'SeniorListController');
 Route::resource('fav', 'FavController');
