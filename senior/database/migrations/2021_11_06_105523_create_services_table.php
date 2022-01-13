@@ -18,9 +18,9 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('site_name', 32);
+            $table->string('site_name', 32)->charset("utf8");
             $table->string('site_url')->charset("utf8");
-            $table->string('memo')->nullable();
+            $table->string('memo')->charset("utf8")->nullable();
             $table->bigInteger('change_id')->unsigned()->nullable();
             $table->timestamps();
 
