@@ -33,13 +33,13 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '名前は必須です。',
-            'name.max' => '名前は20文字以内で入力してください。',
-            'email.required' => 'メールアドレスは必須です。',
-            'email.max' => 'メールアドレスは255文字以内で入力してください。',
-            'password.required' => 'パスワードは必須です。',
-            'password.max' => 'パスワードは20文字以内で入力してください。',
-            'password.min' => 'パスワードは8文字以上で入力してください。',
+            'name.required' => trans('名前は必須です。'),
+            'name.max' => trans('名前は20文字以内で入力してください。'),
+            'email.required' => trans('メールアドレスは必須です。'),
+            'email.max' => trans('メールアドレスは255文字以内で入力してください。'),
+            'password.required' => trans('パスワードは必須です。'),
+            'password.max' => trans('パスワードは20文字以内で入力してください。'),
+            'password.min' => trans('パスワードは8文字以上で入力してください。'),
         ];
     }
 }

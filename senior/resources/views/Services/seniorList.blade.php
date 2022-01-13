@@ -50,7 +50,7 @@
                 </div>
                 <div class="border-bottom"></div>
             @endforeach
-            
+
             @endif
         </div>
         <div class="col-md-2">

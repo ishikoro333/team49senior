@@ -20,39 +20,41 @@
                 <form action="{{ route('users.update', $user->id) }}" method="POST">
                 @csrf
                 @method('PATCH')
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="name">{{ config('const.user.name', 'name') }}</label>
                         <input type="text" class="form-control" value="{{ $user->name }}" name="name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="email">{{ config('const.user.email', 'email') }}</label>
                         <input type="email" class="form-control" value="{{ $user->email }}" name="email">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2 mb-2">
                         <label for="password">{{ config('const.user.new_password', 'new_password') }}</label>
                         <input type="password" class="form-control" name="password">
                     </div>
                     @if ((Auth::user()->id == $user -> id) && $user -> manager_flg == 1)
                     <div class="form-check form-check-inline">
                         <input type="radio" class="form-check-input" id="manager_flg" value=1 checked name="manager_flg">
-                        <label class="form-check-input" for="manager_flg">{{ config('const.user.manager', 'manager') }}</label>
+                        <label class="form-check-label" for="manager_flg">{{ config('const.user.manager', 'manager') }}</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input type="radio" class="form-check-input" id="remove_manager_flg" value=0 name="manager_flg">
-                        <label class="form-check-input" for="remove_manager_flg">{{ config('const.user.remove_manager', 'remove_manager') }}</label>
+                        <label class="form-check-label" for="remove_manager_flg">{{ config('const.user.remove_manager', 'remove_manager') }}</label>
                     </div>
                     @endif
                     @if ((Auth::user()->id == $user -> id) && $user -> manager_flg == 0)
                         <input type="hidden" class="form-check-input" id="manager_flg" value=0 name="manager_flg">
-                        <label class="form-check-input" for="manager_flg"></label>
+                        <label class="form-check-label" for="manager_flg"></label>
                     <div class="form-check form-check-inline">
                         <input type="checkbox" class="form-check-input" id="add_manager_flg" value=1 name="manager_flg">
-                        <label class="form-check-input" for="add_manager_flg">{{ config('const.user.manager', 'manager') }}</label>
+                        <label class="form-check-label" for="add_manager_flg">{{ config('const.user.manager', 'manager') }}</label>
                     </div>
                     @endif
                     @if(Auth::user()->id !== $user -> id)
+                    <div class="mb-2">
                         <input type="hidden" class="form-check-input" id="manager_flg" value="{{ $user->manager_flg }}" name="manager_flg">
-                    @endif
+                    </div>
+                        @endif
                     <div class="mb-2">
                         <button class="btn btn-outline-primary" type="submit">{{ config('const.button.update', 'update') }}</button>
                     </div>
@@ -71,11 +73,6 @@
                         <a href="{{ route('seniorList.index', $user->id) }}" class="btn btn-sm btn-outline-dark mt-2">{{ config('const.button.senior') }}</a>
                     </div>
                 @endif
-<<<<<<< HEAD
-                    <div class>
-=======
-                    <div class="">
->>>>>>> yumoto
                         <a href="{{ route('seniorList.index') }}" class="form-group btn btn-sm btn-outline-dark mt-2">{{ config('const.button.back') }}</a>
                     </div>
             </div>
