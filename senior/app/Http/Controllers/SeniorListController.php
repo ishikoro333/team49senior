@@ -41,9 +41,6 @@ class SeniorListController extends Controller
         }
 
         $users = User::all()->Where('manager_id', '=', $id)->WhereNotIn('id', $id);
-        if (count($users) == 0) {
-            return view('services.index', compact('users'));
-        }
 
         return view('services.index', compact('users'));
 
