@@ -12,7 +12,7 @@
             <div class="text-center mt-5 mb-2">
                 <h5 class="card-title">{{ config('const.message.not_add', 'not_add') }}</h5>
             </div>
-            @endif
+            @else
             @foreach ($users as $user)
 
             @if($user->manager_id == Auth::user()->id)
@@ -35,11 +35,12 @@
                         </form>
                     </li>
 
-                    </div>
-                    <div class="border-bottom">
-                    </div>
-                    @endif
-                    @endforeach
+                </div>
+                <div class="border-bottom">
+                </div>
+                @endif
+                @endforeach
+                @endif
         </div>
         <div class="col-md-2">
             <a href="{{ route('seniorList.create') }}" class="btn btn-outline-success mt-2 ml-4">{{ config('const.button.new', 'new') }}</a>
