@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('users', 'UserController');
-Route::resource('seniorList', 'SeniorListController');
+Route::resource('/seniorList', 'SeniorListController');
 Route::resource('fav', 'FavController');
 Route::get('fav/{fav}/favAdd', 'FavController@favAdd')->name('fav.favAdd');
 
