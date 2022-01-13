@@ -40,7 +40,7 @@ class SeniorListController extends Controller
             return redirect('/');
         }
 
-        $users = User::all()->Where('manager_id', '=', $id)->WhereNotIn('id', $id);
+        $users = User::select('*')->Where('manager_id', '=', $id)->WhereNotIn('id', $id);
 
         return view('services.index', compact('users'));
 
