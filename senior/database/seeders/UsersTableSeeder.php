@@ -1,8 +1,8 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
-use App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -13,6 +13,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, 10)->create();
+        \App\User::factory()->count(10)->create();
     }
+
 }
