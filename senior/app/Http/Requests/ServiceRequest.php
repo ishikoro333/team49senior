@@ -30,5 +30,15 @@ class ServiceRequest extends FormRequest
         ];
     }
 
-    
+    public function messages()
+    {
+        return [
+            'site_name.required' => trans('サイト名は必須です。'),
+            'site_name.max' => trans('サイト名は20文字以内で入力してください。'),
+            'site_url.required' => trans('urlは必須です。'),
+            'site_url.max' => trans('urlは255文字以内で入力してください。'),
+            'memo.max' => trans('20文字以内でメモしてください。'),
+        ];
+    }
+
 }
