@@ -17,7 +17,7 @@
                 </div>
             @endif
             <div class="border-bottom p-2 text-center">
-                    <a href="https://www.google.com/" class="btn btn-lg btn-link" target=”_blank”>google検索</a>
+                    <a href="https://www.google.com/" class="btn btn-lg btn-link" target=”_blank”>{{ config('const.google') }}</a>
             </div>
             <div class="card-body">
 

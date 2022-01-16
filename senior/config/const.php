@@ -64,4 +64,6 @@ return [
         'head' => 'ログイン情報',
     ],
 
+    'google' => 'google検索',
+
 ];
