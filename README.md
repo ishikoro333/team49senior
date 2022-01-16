@@ -4,8 +4,6 @@
 高齢者用お気に入りサービス登録システム
 URL:https://team49senior.herokuapp.com/
 
-<img width="967" alt="スクリーンショット 2022-01-16 16 19 42" src="https://user-images.githubusercontent.com/86862665/149662584-d3f73642-300c-4f26-9eaa-0d845f268ae6.png">
-
 テストユーザー(管理者)
 名前:test
 メールアドレス:test@example.com
@@ -15,3 +13,7 @@ URL:https://team49senior.herokuapp.com/
 名前:モストマスキュラー
 メールアドレス:Most_muscular@example.jp
 パスワード:00000000
+
+<img width="967" alt="スクリーンショット 2022-01-16 16 19 42" src="https://user-images.githubusercontent.com/86862665/149662584-d3f73642-300c-4f26-9eaa-0d845f268ae6.png">
+
+
