@@ -4,7 +4,7 @@
 高齢者用お気に入りサービス登録システム
 URL:https://team49senior.herokuapp.com/
 
-テストユーザー(管理者)
+テストユーザー(監督者)
 名前:test
 メールアドレス:test@example.com
 パスワード:00000000
