@@ -30,7 +30,7 @@
            </div>
          </div>
            <br><input type="checkbox" id="manager" value=1 name="manager" checked>
-            <label for="manager">管理者の方はこちら</label>
+            <label for="manager">監督者の方はこちら</label>
            <br><br><input type="submit" name="button1" value="登録" class="btn btn-primary btn-wide"/>
             <p class="mt-3 mb-2"><a href="signin">ログイン画面へ</a></p>
         </form>

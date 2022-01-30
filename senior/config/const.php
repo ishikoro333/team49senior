@@ -9,8 +9,8 @@ return [
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'new_password' => '新しいパスワード',
-        'manager' => '管理者の方はこちら',
-        'remove_manager' => '管理者登録を外す',
+        'manager' => '監督者の方はこちら',
+        'remove_manager' => '監督者登録を外す',
     ],
 
     'service' => [

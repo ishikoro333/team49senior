@@ -47,7 +47,7 @@
                             </li>
                             @if ( Auth::user()->manager_flg === 1)
                             <li class="nav-item">
-                                <a class="nav-link disabled text-dark" aria-current="page">管理者でログイン中</a>
+                                <a class="nav-link disabled text-dark" aria-current="page">監督者でログイン中</a>
                             </li>
                             @endif
                             <li class="nav-item">
